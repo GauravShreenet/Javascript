@@ -25,5 +25,10 @@ const checkExpire = () => {
 
 }
 
+const expireMessage = checkExpire(food);
+
+for(let i = 0; i < expireMessage.length; i++) {
+    
+}
 
 
