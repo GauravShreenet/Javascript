@@ -13,7 +13,11 @@ const food = [
 ]
 
 const checkExpire = () => {
-    const date1 = 
+    const expireDate = new Date();
+    const daysRemaining = Math.floor(expireDate - currentDate) / (1000 * 60 * 60 * 24);
+
+    
+
 }
 
 
