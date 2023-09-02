@@ -12,24 +12,26 @@ const food = [
 
 ]
 
-const checkExpire = () => {
-    const expireDate = new Date();
-    const daysRemaining = Math.floor(expireDate - currentDate) / (1000 * 60 * 60 * 24);
+const checkExpire = (foodArray) => {
+    const currentDate = new Date();
 
-    if (daysRemaining < 0) {
-        const daysExpired = Math.abs(daysRemaining);
-        return `${foodItem.name} is expired ${daysExpired} days ago.`;
-    }else{
-        return `You have ${daysUntilExpiration} days to use ${foodItem.name}.`;
+    for(let i = 0; i < foodArray.length; i++){
+        const foodItem = foodArray[i];
+        const expireDate = new Date(foodItem.currentDate);
+        const daysRemaining = Math.floor((expireDate - currentDate) / (1000 * 60 * 60 * 24));
+
+        if (daysRemaining < 0) {
+            const daysExpired = Math.abs(daysRemaining);
+            console.log(`${foodItem.name} is expired ${daysExpired} days ago.`);
+        }else{
+            console.log(`You have ${daysRemaining} days to use ${foodItem.name}.`);
+        }
     }
+    
 
 }
 
-const expireMessage = checkExpire(food);
-
-for(let i = 0; i < expireMessage.length; i++) {
-    const message = expireMessage[i];
-    console.log(message);
-}
+checkExpire(food);
 
 
+// console.log('hello world');
