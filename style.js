@@ -83,37 +83,68 @@
 
 //Given an array of objects, write a function that counts how many objects have a specific property or key.
 
-const person = [
-    {
-        name: "John Parker",
-        address: "Sydney",
-        number: 614253665
-    },
-    {
-        name: "Jsun Parker",
-        address: "Melborne",
-        number: 614253665
-    },
-    {
-        name: "Jeppa Parker",
-        address: "Perth",
-        number: 614253665
-    }
-]
+// const person = [
+//     {
+//         name: "John Parker",
+//         address: "Sydney",
+//         number: 614253665
+//     },
+//     {
+//         name: "Jsun Parker",
+//         address: "Melborne",
+//         number: 614253665
+//     },
+//     {
+//         name: "Jeppa Parker",
+//         address: "Perth",
+//         number: 614253665
+//     }
+// ]
 
-const countObjects = (arr, propertyName) => {
-    let count = 0;
+// const countObjects = (arr, propertyName) => {
+//     let count = 0;
 
-  for (const obj of arr) {
-    if (obj.hasOwnProperty(propertyName)) {
-      count++;
-    }
-  }
+//   for (const obj of arr) {
+//     if (obj.hasOwnProperty(propertyName)) {
+//       count++;
+//     }
+//   }
 
-  return count;
-}
+//   return count;
+// }
 
-const propertyToCount = "address";
-const numberOfObjectsWithProperty = countObjects(person, propertyToCount);
+// const propertyToCount = "address";
+// const numberOfObjectsWithProperty = countObjects(person, propertyToCount);
 
-console.log(`Number of objects with the property "${propertyToCount}": ${numberOfObjectsWithProperty}`);
+// console.log(`Number of objects with the property "${propertyToCount}": ${numberOfObjectsWithProperty}`);
+
+
+// const person = [
+//     {
+//         name: "John Parker",
+//         address: "Sydney",
+//         number: 614253665
+//     },
+//     {
+//         name: "Jsun Parker",
+//         address: "Melbourne",
+//         number: 614253665
+//     },
+//     {
+//         name: "Jeppa Parker",
+//         address: "Perth",
+//         number: 614253665
+//     }
+// ]
+
+// function filterObject(arr, propertyName, propertyValue) {
+//   return arr.filter(item => item[propertyName] !== propertyValue);
+// }
+
+// const propertyToFilter = "address";
+// const valueToExclude = "Sydney";
+
+// const filteredObjects = filterObject(person, propertyToFilter, valueToExclude);
+
+// console.log("Filtered Objects:");
+// console.log(filteredObjects);
