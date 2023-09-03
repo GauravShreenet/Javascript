@@ -33,31 +33,60 @@
 
 // checkExpire(food);
 
-const food1 = {
-    name: "Beef",
-    expireDate: "2023-09-15"
+// const food1 = {
+//     name: "Beef",
+//     expireDate: "2023-09-15"
+// }
+
+// const food2 = {
+//     name: "Milk",
+//     expireDate: "2023-08-25"
+// }
+
+// const check = (food) => {
+//     const currentDate = new Date();
+//     const dateExpire = new Date(food.expireDate);
+//     const daysRemaining = Math.floor((dateExpire - currentDate) / (1000 * 60 * 60 * 24));
+//     console.log(daysRemaining);
+//     if (daysRemaining < 0) {
+//         const daysExpired = Math.abs(daysRemaining);
+//         return `${food.name} is expired ${daysExpired} days ago`
+//     }else{
+//         return `You have ${daysRemaining} days to use ${food.name}.`
+//     }
+// }
+
+// const data1 = check(food1);
+// const data2 = check(food2);
+
+// console.log(data1);
+// console.log(data2);
+
+// find the greatest number in a arry of randomnumber
+
+const num = []
+
+for(let i = 0; i < 10; i++){
+    num.push(Math.floor(Math.random()* 100) + 1);
 }
 
-const food2 = {
-    name: "Milk",
-    expireDate: "2023-08-25"
-}
+console.log(num);
 
-const check = (food) => {
-    const currentDate = new Date();
-    const dateExpire = new Date(food.expireDate);
-    const daysRemaining = Math.floor((dateExpire - currentDate) / (1000 * 60 * 60 * 24));
-    console.log(daysRemaining);
-    if (daysRemaining < 0) {
-        const daysExpired = Math.abs(daysRemaining);
-        return `${food.name} is expired ${daysExpired} days ago`
-    }else{
-        return `You have ${daysRemaining} days to use ${food.name}.`
+let greatestValue = num[0]; 
+for(const numValue of num){
+    if (numValue > greatestValue) {
+        greatestValue = numValue;
     }
 }
+console.log("the greatest number is: ", greatestValue);
 
-const data1 = check(food1);
-const data2 = check(food2);
 
-console.log(data1);
-console.log(data2);
+//count objects in the arrray
+
+// const person = [
+//     {
+//         name: "John Parker",
+//         address: "Sydney",
+//         number: 614253665
+//     }
+// ]
