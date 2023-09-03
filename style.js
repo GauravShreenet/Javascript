@@ -64,29 +64,56 @@
 
 // find the greatest number in a arry of randomnumber
 
-const num = []
+// const num = []
 
-for(let i = 0; i < 10; i++){
-    num.push(Math.floor(Math.random()* 100) + 1);
-}
+// for(let i = 0; i < 10; i++){
+//     num.push(Math.floor(Math.random()* 100) + 1);
+// }
 
-console.log(num);
+// console.log(num);
 
-let greatestValue = num[0]; 
-for(const numValue of num){
-    if (numValue > greatestValue) {
-        greatestValue = numValue;
-    }
-}
-console.log("the greatest number is: ", greatestValue);
-
-
-//count objects in the arrray
-
-// const person = [
-//     {
-//         name: "John Parker",
-//         address: "Sydney",
-//         number: 614253665
+// let greatestValue = num[0]; 
+// for(const numValue of num){
+//     if (numValue > greatestValue) {
+//         greatestValue = numValue;
 //     }
-// ]
+// }
+// console.log("the greatest number is: ", greatestValue);
+
+
+//Given an array of objects, write a function that counts how many objects have a specific property or key.
+
+const person = [
+    {
+        name: "John Parker",
+        address: "Sydney",
+        number: 614253665
+    },
+    {
+        name: "John Parker",
+        address: "Sydney",
+        number: 614253665
+    },
+    {
+        name: "John Parker",
+        address: "Sydney",
+        number: 614253665
+    }
+]
+
+const countObjects = (arr, propertyName) => {
+    let count = 0;
+
+  for (const obj of arr) {
+    if (obj.hasOwnProperty(propertyName)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+const propertyToCount = "city";
+const numberOfObjectsWithProperty = countObjects(arrayOfObjects, propertyToCount);
+
+console.log(`Number of objects with the property "${propertyToCount}": ${numberOfObjectsWithProperty}`);
