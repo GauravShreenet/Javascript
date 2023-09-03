@@ -90,13 +90,13 @@ const person = [
         number: 614253665
     },
     {
-        name: "John Parker",
-        address: "Sydney",
+        name: "Jsun Parker",
+        address: "Melborne",
         number: 614253665
     },
     {
-        name: "John Parker",
-        address: "Sydney",
+        name: "Jeppa Parker",
+        address: "Perth",
         number: 614253665
     }
 ]
@@ -113,7 +113,7 @@ const countObjects = (arr, propertyName) => {
   return count;
 }
 
-const propertyToCount = "city";
-const numberOfObjectsWithProperty = countObjects(arrayOfObjects, propertyToCount);
+const propertyToCount = "address";
+const numberOfObjectsWithProperty = countObjects(person, propertyToCount);
 
 console.log(`Number of objects with the property "${propertyToCount}": ${numberOfObjectsWithProperty}`);
