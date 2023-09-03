@@ -118,7 +118,7 @@
 
 // console.log(`Number of objects with the property "${propertyToCount}": ${numberOfObjectsWithProperty}`);
 
-
+// Create a function that filters an array of objects based on a given condition. For example, filter out all objects with a certain property value.
 // const person = [
 //     {
 //         name: "John Parker",
@@ -148,3 +148,34 @@
 
 // console.log("Filtered Objects:");
 // console.log(filteredObjects);
+
+// Write a function that takes an object and a key as input and returns a new object with the specified key removed.
+
+function removeObjectKey(inputObj, keyToRemove) {
+    // Create a new object by spreading the input object
+    const newObj = { ...inputObj };
+    
+    // Check if the key exists in the new object
+    if (newObj.hasOwnProperty(keyToRemove)) {
+      // Remove the key from the new object
+      delete newObj[keyToRemove];
+    }
+    
+    return newObj;
+  }
+  
+  const originalObject = {
+    name: "John",
+    age: 30,
+    city: "New York",
+  };
+  
+  const keyToRemove = "age";
+  
+  const updatedObject = removeObjectKey(originalObject, keyToRemove);
+  
+  console.log("Original Object:");
+  console.log(originalObject);
+  
+  console.log("\nUpdated Object (key removed):");
+  console.log(updatedObject);
